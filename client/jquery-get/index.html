@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Jquery</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            // get
+            $('#get-test-btn').click(function() {
+                alert($('#test-line').text())
+            })
+            // html
+            $('#get-html-btn').click(function() {
+                alert($('#test-line').html())
+            })
+            // value
+            $('#get-value-btn').click(function() {
+                alert($('#username-inpput').val())
+            })
+            // attr
+            $('#get-attr-btn').click(function() {
+                alert($('#test-line').attr('style'))
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 justify-content-center">
+                <p style=" padding:10px; " class="text-white bg-danger"  id="test-line">This is <b>TEST</b> line</p>
+                <label for="unsname">User Name:</label>
+                <input type="text" class="form-control" name="username" id="username-inpput" value="Quang kute hot me">
+                <h4>GET</h4>
+                <button class="btn btn-info" id="get-test-btn">GET TExT</button>
+                <button class="btn btn-info" id="get-html-btn">GET HTML</button>
+                <button class="btn btn-info" id="get-value-btn">GET Value</button>
+                <button class="btn btn-info" id="get-attr-btn">GET Attr</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

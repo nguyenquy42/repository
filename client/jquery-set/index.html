@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Jquery</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            // SET
+            $('#set-text-btn').click(function() {
+                $('#test-line').text('thay đổi text')
+            })
+            $('#set-html-btn').click(function() {
+                $('#test-line').html('<b>thay đổi html</b>')
+            })
+            $('#set-value-btn').click(function() {
+                $('#username-inpput').val('minh fake kiki')
+            })
+            $('#set-attr-btn').click(function() {
+                $("img").attr("width", "400");
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 justify-content-center">
+                <p style=" padding:10px; " class="text-white bg-danger"  id="test-line">This is <b>TEST</b> line</p>
+                <label for="unsname">User Name:</label>
+                <input type="text" class="form-control" name="username" id="username-inpput" value="Quang kute hot me">
+                <img id="img" src="img/1.jpg" alt="img" width="300px" height="200px">
+                <h4>SET</h4>
+                <button class="btn btn-info" id="set-text-btn">SET TExT</button>
+                <button class="btn btn-info" id="set-html-btn">SET HTML</button>
+                <button class="btn btn-info" id="set-value-btn">SET Value</button>
+                <button class="btn btn-info" id="set-attr-btn">SET Attr</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

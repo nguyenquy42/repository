@@ -9,24 +9,24 @@ const users = [
     },
     {
         id: '3',
-        name: "Minh"
+        name: "Thanh"
     },
     {
         id: '4',
-        name: "Minh"
+        name: "Thanh Thanh"
     },
     {
         id: '5',
-        name: "Minh"
+        name: "Thanh Thanh Thanh"
     },
     {
         id: '6',
-        name: "Minh"
+        name: "Thanh Thanh Thanh Thanh"
     },
 ]
 
 module.exports.getUsers = (req, res) => {
-    res.render('users', {users})
+    res.render('users', { users })
 }
 
 module.exports.getUsersByID = (req, res) => {

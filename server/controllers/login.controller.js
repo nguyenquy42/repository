@@ -1,7 +1,7 @@
 const users = [
     {
-        username: "xuanminh",
-        password: "4987"
+        username: "thanh",
+        password: "1234"
     }
 ]
 
@@ -10,14 +10,14 @@ module.exports.getLoginForm = (req, res) => {
 }
 
 module.exports.checkLogin = (req, res) => {
-    for(let user of users){
-        if(user.username == req.body.username.toLowerCase()){
-            if(user.password == req.body.password){
+    for (let user of users) {
+        if (user.username == req.body.username.toLowerCase()) {
+            if (user.password == req.body.password) {
                 res.redirect('/users')
-            } else{
+            } else {
                 res.send("Wrong Password!")
             }
-        } else{
+        } else {
             res.send("Wrong Username!")
         }
     }

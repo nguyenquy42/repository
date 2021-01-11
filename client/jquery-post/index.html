@@ -11,6 +11,61 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <style>
+
+      
+
+      .body-main {
+          position: relative;
+          background-color: #fbfaff;
+          background: linear-gradient(113deg,#cbf1d9 0%,#cbf1d9 0%,#cbf1d9 11%,rgba(255,255,255,0) 11%);
+      }
+
+      .body-main::before {
+          content: "";
+          width: 100%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: rgba(16,16,16,0.04);
+          -webkit-mask-image: url(img/graph-paper.svg);
+          mask-image: url(img/graph-paper.svg);
+          -webkit-mask-size: 150px;
+      }
+
+      .btn-post {
+          border: 1px solid #e0e0e0;
+          background-color: #ff9f00;
+          font-size: large;
+      }
+
+      .post-main {
+          box-shadow: 0px 6px 10px rgba(0,0,0,0.15);
+          background-color: #fff;
+          padding: 30px;
+      }
+
+      .item-title {
+          font-size: x-large;
+          font-weight: bolder;
+      }
+    </style>
+    <script>
+      let getTiming = setInterval(() => {
+          if (getTiming) clearInterval()
+
+          let title = $('#namepost').val()
+          let content = $('#content').val()
+
+          if (title && content) {
+              $('#submit').css('animation', 'scale 1s alternate infinite')
+          } else {
+              $('#submit').css('animation', 'none')
+          }
+      }, 300)
+  </script>
 </head>
 
 <body>
@@ -25,11 +80,11 @@
           <div class="post-main text-center">
             <form action="/posts" method="post">
               <label class="item-title mt-1">Tiêu Đề</label>
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" name="namepost" id="namepost">
               <label class="item-title mt-1">Nội Dung</label>
-              <textarea class="form-control" name="content" id="" cols="30" rows="8"></textarea>
+              <textarea class="form-control" name="content" id="content" cols="30" rows="8"></textarea>
               <label class="item-title mt-1">Tác Giả</label>
-              <select name="author" class="form-control">
+              <select name="author" id="author" class="form-control">
                 <option value="vu">Vũ</option>
                 <option value="thanh">Thanh</option>
                 <option value="hiep">Hiệp</option>

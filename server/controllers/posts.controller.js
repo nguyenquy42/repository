@@ -130,7 +130,7 @@ module.exports.getPosts = (req, res) => {
 
 //LINK TO FORM CRATE POST
 module.exports.getForm = (req, res) => {
-    fs.readFile(`${path.dirname(path.dirname(__dirname))}/client/jquery-post.html`, (err, html) => {
+    fs.readFile(`${path.dirname(path.dirname(__dirname))}/client/jquery-post/index.html`, (err, html) => {
         if (err) throw err
 
         res.writeHeader(200, { "Content-Type": "text/html" });

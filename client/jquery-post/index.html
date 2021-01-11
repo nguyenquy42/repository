@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      
+      .body-main {
+          position: relative;
+          background-color: #fbfaff;
+          background: linear-gradient(113deg,#cbf1d9 0%,#cbf1d9 0%,#cbf1d9 11%,rgba(255,255,255,0) 11%);
+      }
+
+      .body-main::before {
+          content: "";
+          width: 100%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: rgba(16,16,16,0.04);
+          -webkit-mask-image: url(img/graph-paper.svg);
+          mask-image: url(img/graph-paper.svg);
+          -webkit-mask-size: 150px;
+      }
+
+      .btn-post {
+          border: 1px solid #e0e0e0;
+          background-color: #ff9f00;
+          font-size: large;
+      }
+
+      .post-main {
+          box-shadow: 0px 6px 10px rgba(0,0,0,0.15);
+          background-color: #fff;
+          padding: 30px;
+      }
+
+      .item-title {
+          font-size: x-large;
+          font-weight: bolder;
+      }
+    </style>
+</head>
+
+<body>
+
+  <div class="body-main">
+    <div class="container">
+      <div class="row pt-3">
+        <div class="title text-center w-100">
+          <h1>Đăng Bài</h1>
+        </div>
+        <div class="col-12">
+          <div class="post-main text-center">
+            <form action="/posts" method="post">
+              <label class="item-title mt-1">Tiêu Đề</label>
+              <input type="text" class="form-control">
+              <label class="item-title mt-1">Nội Dung</label>
+              <textarea class="form-control" name="content" id="" cols="30" rows="8"></textarea>
+              <label class="item-title mt-1">Tác Giả</label>
+              <select name="author" class="form-control">
+                <option value="vu">Vũ</option>
+                <option value="thanh">Thanh</option>
+                <option value="hiep">Hiệp</option>
+              </select>
+              <button class="btn btn-post w-100 mt-3">Post</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

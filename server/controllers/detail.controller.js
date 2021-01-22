@@ -1,7 +1,7 @@
 //  REQUIRE
 const fs = require('fs');
 const path = require('path');
-const { post } = require('../routes/detail.route');
+const { post } = require('../routes/posts.route');
 
 //  CONNECT TO MONGO + INSERT NEW POST
 function insertPost(post) {
@@ -130,7 +130,7 @@ module.exports.getPosts = (req, res) => {
 
 //LINK TO FORM CRATE POST
 module.exports.getForm = (req, res) => {
-    fs.readFile(`${path.dirname(path.dirname(__dirname))}/client/jquery-post/index.html`, (err, html) => {
+    fs.readFile(`${path.dirname(path.dirname(__dirname))}/client/jquery-get/index.html`, (err, html) => {
         if (err) throw err
 
         res.writeHeader(200, { "Content-Type": "text/html" });

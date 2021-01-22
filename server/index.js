@@ -6,6 +6,7 @@ const usersRoute = require('./routes/users.route')
 const postsRoute = require('./routes/posts.route')
 const loginRoute = require('./routes/login.route')
 const getFormRoute = require('./routes/getForm.route')
+const getdetail = require('./routes/detail.route')
 
 //  ASSIGN APP VARIABLE AND CREATE SERVER
 const app = express()
@@ -38,6 +39,7 @@ app.use('/users', usersRoute)
 app.use('/posts', postsRoute)
 app.use('/login', loginRoute)
 app.use('/form', getFormRoute)
+app.use('/get', getdetail)
 
 app.get('*', (req, res) => {
   res.send('<h3 style="color:tomato;">404 NOT FOUND!</h3>')
